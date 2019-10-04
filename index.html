@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess the Band</h1>
+    <h2>you have 12 guesses</h2>
+
+ <p id="letters"></p>
+ 
+    <script>
+
+ //Pysudo Code  - Game 2- Guesse the band
+ // 1.creating an array of Band names
+//2.randomly picking a band from the array
+//3. split the band name to an array of letters
+//4. display the band name length by "_" for each letter
+//5.on keypress, the user submits a guess 
+//6.if the guess is equal to a letter in the chosen band name than the letter appears on the screen
+//7.the guesses that are not correct appear under the Guesses section
+//8.the user has 12 guesses 
+//9.after 12 guesses the losses score is updated to +1
+//10.if the user didn't display the whole band name before 12 guesses the game starts again.
+
+
+
+var band = ["nirvana","queen","metallica","oasis","radiohead","greenday","coldplay","Aerosmith","soundgarden"]
+var choice= Math.floor(Math.random()*8);
+var answer= band[choice];
+console.log(answer);
+
+var myLength= answer.length;
+// band name split
+for (var letters = 0; letters < myLength; letters++) {
+    document.write(answer.charAt(letters));
+    var var1=(answer.charAt(letters));
+    console.log(var1);
+
+    
+}
+
+var win=myLength;
+var attemptsLeft= 12;
+var output="";
+var userLetter="";
+
+document.onkeypress = function (event) {
+        //console.log(event)
+        var user = String.fromCharCode(event.keyCode)
+        document.getElementById("user").innerHTML = user;
+        }
+  
+
+    
+
+
+    </script>
+<p id="user"></p>
+    
+</body>
+</html>
