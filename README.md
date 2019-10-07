@@ -1,3 +1,4 @@
+Pleas Note!!! the JS is inside the HTML file 
 # GuessingGame
 1.creating an array of Band names
 
