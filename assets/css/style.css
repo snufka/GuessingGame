@@ -1,0 +1,12 @@
+body{
+    background-color: blue;
+    width: 960px;
+    float: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+
+div{
+    width: 600px;
+    float: right;
+}

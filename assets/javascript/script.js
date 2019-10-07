@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Guess the Band</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <DIV>
-        <header>
-    <h1>Guess The Band</h1>
-</header>
-    <h1 id="currentword"></h1>
-    <p id="winstracker">Wins:</p>
-    <p id="losstracker">Losses:</p>
-    <p id="guessesremaining">Guesses left:</p>
-    <p id="playerguesses">Your Guesses:</p>
-
-   <script>
-  
 var words = ["nirvana","queen","metallica","oasis","radiohead","greenday","coldplay","aerosmith","soundgarden"]
 var randomWord = "";
 var lettersOfWord = []
@@ -88,7 +66,7 @@ function checkLetters(letter) {
     else {
         wrongGuess.push(letter);
         guessesRemaining--;
-        }
+    }
     console.log(blanksAndCorrect);
 
     
@@ -121,15 +99,9 @@ Game()
 document.onkeyup = function (event) {
     var guesses = String.fromCharCode(event.keyCode).toLowerCase();
    
-   
     checkLetters(guesses);
     complete();
     console.log(guesses);
 
     document.getElementById("playerguesses").innerHTML = "Your Guesses:  " + wrongGuess.join(" ");
 }
-    
-    </script>
-    </DIV>
-</body>
-</html>
